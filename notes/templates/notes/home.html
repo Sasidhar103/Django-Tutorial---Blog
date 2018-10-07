@@ -11,7 +11,8 @@
     <div class="container">
         <div id="products" class="row view-group">
 
-
+            {% for note in notes %}
+            
             <div class="item col-xs-4 col-lg-4">
                 <div class="thumbnail card">
                     <div class="img-event">
@@ -19,9 +20,9 @@
                     </div>
                     <div class="caption card-body">
                         <h4 class="group card-title inner list-group-item-heading">
-                            Title</h4>
+                            {{note.title}}</h4>
                         <p class="group inner list-group-item-text">
-                            Body</p>
+                            {{note.content}}</p>
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <a class="btn btn-success" href="http://www.jquery2dotnet.com">Edit</a>
@@ -34,6 +35,7 @@
                 </div>
             </div>
 
+            {% endfor %}
 
         </div>
     </div>
