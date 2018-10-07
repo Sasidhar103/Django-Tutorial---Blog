@@ -8,4 +8,35 @@
 
     <h1>{{page_title}}</h1>
 
+    <div class="container">
+        <div class="row">
+            <form role="form" id="contact-form" class="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="title" autocomplete="off" id="Name" placeholder="Title">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control textarea" rows="3" name="content" id="Message" placeholder="Content"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-6">
+                    <div class="file btn btn-lg btn-secondary my-2">
+                        <input type="file" name="file"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn main-btn pull-right">Upload Note</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 {% endblock %}
