@@ -10,7 +10,8 @@
 
     <div class="container">
         <div class="row">
-            <form role="form" id="contact-form" class="contact-form">
+            <form role="form" id="contact-form" class="contact-form" method="POST" action='{% url "uploadNote" %}' enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -27,7 +28,7 @@
                 </div>
                 <div class="row col-6">
                     <div class="file btn btn-lg btn-secondary my-2">
-                        <input type="file" name="file"/>
+                        <input type="file" name="image"/>
                     </div>
                 </div>
                 <div class="row">
