@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'notes/home.html', {
+    data = {
         'page_title': 'Home',
         'notes': [{
             'title': 'Note 1',
@@ -16,7 +16,8 @@ def index(request):
             'title': 'Note 3',
             'content': 'Content of the third note is seen here'
         }]
-    })
+    }
+    return render(request, 'notes/home.html', data)
 
 def addNote(request):
     return render(request, 'notes/addNote.html', {
