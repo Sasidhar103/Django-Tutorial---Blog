@@ -5,25 +5,25 @@
                 <h5 class="modal-title">Register</h5>
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body">
-                <form>
-                <div class="form-group">
-                    <input type="text" placeholder="Username" class="form-control">
+            <form action="{% url 'register' %}" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email" class="form-control">
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-dismiss="modal">Register</button>
                 </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Confirm Password" class="form-control">
-                </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal">Register</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
